@@ -20,11 +20,9 @@
 1. Flutter’ın yüklü olduğundan emin olun:  
    ```sh
    flutter --version
-git clone https://github.com/mehmetcyr0/sigarayi_birak.git
-
-cd sigarayi.birak
-
-flutter pub get
+   git clone https://github.com/mehmetcyr0/sigarayi_birak.git
+   cd sigarayi.birak
+   flutter pub get
 
 🛠️ Kullanım
 Bilgilerinizi Girin: Günlük içilen sigara sayısı ve sigara paket fiyatını girin.
