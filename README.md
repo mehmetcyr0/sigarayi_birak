@@ -25,6 +25,7 @@
    flutter pub get
 
 🛠️ Kullanım
+
 Bilgilerinizi Girin: Günlük içilen sigara sayısı ve sigara paket fiyatını girin.
 İstatistikleri Takip Edin: İçilmeyen sigara adedi ve biriken para miktarını anlık olarak görebilirsiniz.
 Seri Takibini Yapın: "Bugün sigara içmedim" butonuna basarak serinizi artırabilirsiniz.
@@ -40,6 +41,7 @@ Hedefler Belirleyin: Uygulama üzerinden kişisel hedefler ekleyerek sigarayı b
  Provider – Durum yönetimi
 
 📩 İletişim
+
 Herhangi bir soru veya öneriniz için benimle iletişime geçebilirsiniz:
 
 E-posta: mehmet.cyr38@gmail.com
