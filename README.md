@@ -32,9 +32,9 @@ Hedefler Belirleyin: Uygulama üzerinden kişisel hedefler ekleyerek sigarayı b
 
 
 📌 Teknolojiler
-Flutter – UI geliştirme
-Dart – Programlama dili
-Provider – Durum yönetimi
+ Flutter – UI geliştirme
+ Dart – Programlama dili
+ Provider – Durum yönetimi
 
 📩 İletişim
 Herhangi bir soru veya öneriniz için benimle iletişime geçebilirsiniz:
