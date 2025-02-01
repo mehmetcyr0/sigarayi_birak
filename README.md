@@ -21,7 +21,9 @@
    ```sh
    flutter --version
 git clone https://github.com/mehmetcyr0/sigarayi_birak.git
+
 cd sigarayi.birak
+
 flutter pub get
 
 🛠️ Kullanım
