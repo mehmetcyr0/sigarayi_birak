@@ -12,9 +12,7 @@ class ProgressCard extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Consumer<SmokingDataProvider>(
           builder: (context, provider, child) {
-            final daysSinceQuit = provider.quitDate != null
-                ? DateTime.now().difference(provider.quitDate!).inDays
-                : 0;
+            final daysSinceQuit = provider.daysSinceQuit;
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,6 +35,11 @@ class ProgressCard extends StatelessWidget {
                   valueColor: AlwaysStoppedAnimation<Color>(
                     Theme.of(context).colorScheme.primary,
                   ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  '30 günlük hedef: ${(daysSinceQuit / 30 * 100).toStringAsFixed(1)}%',
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],
             );

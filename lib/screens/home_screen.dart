@@ -28,18 +28,36 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Consumer2<SmokingDataProvider, MotivationProvider>(
         builder: (context, smokingData, motivationData, child) {
-          if (smokingData.quitDate == null) {
+          if (!smokingData.hasQuitDate) {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'lib/assets/quit_smoke.jpg',
-                    height: 200,
+                  Container(
                     width: 200,
-                    fit: BoxFit.cover,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[800],
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: const Icon(
+                      Icons.smoke_free,
+                      size: 100,
+                      color: Colors.white,
+                    ),
                   ),
                   const SizedBox(height: 16),
+                  Text(
+                    'Sigarayı Bırak',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Sağlıklı bir yaşam için ilk adımı at',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: () => showDialog(
                       context: context,
@@ -68,11 +86,11 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showAddGoalDialog(context),
-        child: const Icon(
-          color: Colors.white,
-          Icons.add,
-        ),
         backgroundColor: Colors.grey[850]!,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }

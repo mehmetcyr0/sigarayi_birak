@@ -56,4 +56,26 @@ class SmokingDataProvider with ChangeNotifier {
     _pricePerPack = prefs.getDouble('price_per_pack') ?? 0.0;
     notifyListeners();
   }
+
+  // Verileri temizlemek için yardımcı method
+  Future<void> clearData() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('quit_date');
+    await prefs.remove('daily_cigarettes');
+    await prefs.remove('price_per_pack');
+    
+    _quitDate = null;
+    _dailyCigarettes = 0;
+    _pricePerPack = 0.0;
+    notifyListeners();
+  }
+
+  // Sigarayı bırakma tarihini kontrol etmek için getter
+  bool get hasQuitDate => _quitDate != null;
+
+  // Sigarayı bıraktığından beri geçen gün sayısı
+  int get daysSinceQuit {
+    if (_quitDate == null) return 0;
+    return DateTime.now().difference(_quitDate!).inDays;
+  }
 }
